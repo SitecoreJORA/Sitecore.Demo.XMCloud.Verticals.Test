@@ -1,3 +1,39 @@
+// Burjeel
+.site-burjeel {
+  --text-body: #333;
+  --text-body-inverted: #fff;
+  --text-colored: #8b124c;
+  --text-footer: #fff;
+  --text-accent: #a82a39;
+  --bg-body: #fff;
+  --bg-footer: #333;
+  --bg-main: #f0f5f7;
+  --bg-main-alt: #f0f5f7;
+  --bg-color: #c5e4f3;
+  --bg-saturated: #8b124c;
+  --bg-accent: #c03021;
+  --border-color: #f0f5f7;
+  --hr-color: #fff;
+  --roundness: 1rem;
+
+  .dark & {
+    --text-body: #fff;
+    --text-body-inverted: #333;
+    --text-colored: #c5e4f3;
+    --text-footer: #fff;
+    --text-accent: #a82a39;
+    --bg-body: #031827;
+    --bg-footer: #333;
+    --bg-main: #8b124c;
+    --bg-main-alt: #031827;
+    --bg-color: #8b124c;
+    --bg-saturated: #8b124c;
+    --bg-accent: #c03021;
+    --border-color: #8b124c;
+    --hr-color: #fff;
+    --roundness: 1rem;
+  }
+}
 // Financial
 .site-financial {
   --text-body: #333;

@@ -23,6 +23,31 @@
   }
 }
 
+.site-burjeel .loan-calculator {
+  --range-slider-color-active: #034c81;
+  --range-slider-color-inactive: #929292;
+  --calc-bg-main: var(--bg-main);
+  --calc-bg-box: var(--bg-body);
+
+  .dark & {
+    --range-slider-color-active: #031827;
+    --range-slider-color-inactive: #707070;
+  }
+
+  &.colored {
+    --range-slider-color-active: #034c81;
+    --range-slider-color-inactive: #929292;
+    --calc-bg-main: var(--bg-body);
+    --calc-bg-box: var(--bg-main-alt);
+
+    .dark & {
+      --range-slider-color-active: #fff;
+      --range-slider-color-inactive: #707070;
+      --calc-bg-main: var(--bg-saturated);
+    }
+  }
+}
+
 .loan-calculator {
   &-input-group {
     margin-bottom: 2rem;

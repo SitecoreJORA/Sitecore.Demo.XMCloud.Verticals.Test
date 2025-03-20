@@ -38,12 +38,15 @@
     text-align: left;
     border-radius: var(--roundness);
     overflow: hidden;
+    &:hover{
+      background-color: #8b124c;
+    }
   }
 
   .text-wrapper {
     width: 100%;
     flex-grow: 1;
-    background-color: var(--bg-main);
+    //background-color: var(--bg-main);
     padding: 1em;
     border-radius: 0 0 var(--roundness) var(--roundness);
   }
@@ -55,4 +58,15 @@
       border-top: none;
     }
   }
+}
+
+.container-color-background{
+  color: white;
+  h2{
+    color: white!important;
+  }
+}
+
+.overlay-top{
+  top: -190px;
 }

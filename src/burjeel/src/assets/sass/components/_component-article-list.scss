@@ -1,6 +1,7 @@
 @import 'src/assets/sass/abstracts/vars';
 
 .article-list {
+  background-color: var(--bg-saturated);
   @include respond-to(mobile-large) {
     padding: 0 $size-padding;
   }
@@ -8,16 +9,19 @@
   .title {
     font-weight: bold;
     margin-bottom: 0.5em;
+    color: var(--text-footer);
   }
 
   .article-excerpt {
-    color: var(--text-colored);
+    color: var(--text-footer);
   }
-
+  a{
+    color: var(--text-footer);
+  }
   .learn-more {
     font-size: 20px;
     font-weight: bold;
-    color: var(--text-body);
+    color: var(--text-footer);
 
     i {
       padding-left: 0.5rem;
@@ -34,8 +38,9 @@
   }
 
   .background {
-    background-color: var(--bg-main);
+    background-color: none;
     border-radius: var(--roundness);
+    color: var(--text-footer);
   }
 
   img {
@@ -71,6 +76,7 @@
         h3 {
           @media (width > 992px) {
             font-size: 2.5rem !important;
+            color: var(--text-footer);
           }
         }
 
@@ -87,6 +93,7 @@
     .background {
       background: none !important;
       padding: 0 !important;
+      color: var(--text-footer);
     }
   }
 }

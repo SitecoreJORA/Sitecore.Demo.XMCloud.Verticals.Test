@@ -24,7 +24,7 @@
     --text-accent: #a82a39;
     --bg-body: #031827;
     --bg-footer: #333;
-    --bg-main: #8b124c;
+    --bg-main: #031827;
     --bg-main-alt: #031827;
     --bg-color: #8b124c;
     --bg-saturated: #8b124c;
@@ -112,7 +112,7 @@ $bg-basic-color: var(--bg-body) !default;
 $bg-basic-color-active: var(--bg-main) !default;
 $bg-light-gray: #f7f7f7 !default;
 $bg-light-gray-active: #dadada !default;
-$bg-blue: var(--bg-color);
+$bg-blue: var(--bg-saturated);
 $bg-blue-active: var(--bg-saturated) !default;
 $bg-submenu: #edebeb !default;
 $bg-submenu-active: #f6f6f6 !default;

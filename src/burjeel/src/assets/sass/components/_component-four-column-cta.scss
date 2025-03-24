@@ -38,8 +38,10 @@
     text-align: left;
     border-radius: var(--roundness);
     overflow: hidden;
+    box-shadow: 0 10px 30px 0 #2f2E2E4D;
     &:hover{
       background-color: #8b124c;
+      color: white;
     }
   }
 

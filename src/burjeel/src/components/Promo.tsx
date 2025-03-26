@@ -32,7 +32,10 @@ export const Default = (props: PromoProps): JSX.Element => {
   const id = props.params.RenderingIdentifier;
   if (props.fields) {
     return (
-      <div className={`component promo ${props.params.styles}`} id={id ? id : undefined}>
+      <div
+        className={`component promo default-promo ${props.params.styles}`}
+        id={id ? id : undefined}
+      >
         <div className="component-content">
           <div className="field-promoicon">
             <JssImage field={props.fields.PromoIcon} />
@@ -41,10 +44,8 @@ export const Default = (props: PromoProps): JSX.Element => {
             <div>
               <div className="field-promotext">
                 <JssRichText field={props.fields.PromoText} />
+                <JssLink className="field-promolink" field={props.fields.PromoLink} />
               </div>
-            </div>
-            <div className="field-promolink">
-              <JssLink field={props.fields.PromoLink} />
             </div>
           </div>
         </div>
@@ -70,8 +71,38 @@ export const WithText = (props: PromoProps): JSX.Element => {
                 <JssRichText className="promo-text" field={props.fields.PromoText} />
               </div>
             </div>
-            <div className="field-promotext">
-              <JssRichText className="promo-text" field={props.fields.PromoText2} />
+          </div>
+          <div className="field-promotext">
+            <JssRichText className="promo-text" field={props.fields.PromoText2} />
+          </div>
+        </div>
+      </div>
+    );
+  }
+
+  return <PromoDefaultComponent {...props} />;
+};
+
+export const ImageTop = (props: PromoProps): JSX.Element => {
+  const id = props.params.RenderingIdentifier;
+  if (props.fields) {
+    return (
+      <div
+        className={`component promo imageTop-promo ${props.params.styles}`}
+        id={id ? id : undefined}
+      >
+        <div className="component-content">
+          <div className="field-promoicon">
+            <JssImage field={props.fields.PromoIcon} />
+          </div>
+          <div className="promo-text">
+            <div>
+              <div className="field-promotext">
+                <JssRichText field={props.fields.PromoText} />
+              </div>
+            </div>
+            <div className="field-promolink">
+              <JssLink field={props.fields.PromoLink} />
             </div>
           </div>
         </div>

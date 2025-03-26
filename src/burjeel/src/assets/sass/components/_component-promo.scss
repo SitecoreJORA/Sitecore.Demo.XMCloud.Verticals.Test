@@ -11,7 +11,6 @@
     position: relative;
 
     @include clearfix;
-    @include border-basic(all, $promo-border);
 
     > div {
       padding: 5px;
@@ -27,6 +26,8 @@
   .field-promoicon {
     overflow: hidden;
     width: 100%;
+    border-radius: 50px;
+    
 
     img {
       width: 100%;
@@ -37,6 +38,14 @@
   .field-promolink {
     margin-top: 5px;
     padding-bottom: 10px;
+    background-color: #8b124c;
+    padding: 10px 20px;
+    width: fit-content;
+    border-radius: 20px;
+    a{
+      color: white;
+      text-decoration: none;
+    }
   }
 
   &.image-full-size {
@@ -45,6 +54,58 @@
     }
   }
 
+
   @import 'src/assets/sass/variants/promo';
   @import 'src/assets/sass/base/richtext/richtext';
+}
+
+.default-promo {
+  display: flex;
+  .component-content{
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1 1;
+  }
+  .field-promoicon{
+    //width: 50%;
+    display: flex;
+    flex: 1;
+  }
+  .promo-text{
+    display: flex;
+    align-items: center;
+    flex: 1;
+    //width: 50%;
+    div{
+      display: flex;
+      flex-direction: column;
+    }
+
+  }
+
+  ul{
+    padding: 5px;
+    margin: 0;
+  }
+
+  .field-promolink {
+    margin-top: 5px;
+    padding-bottom: 10px;
+    background-color: #8b124c;
+    padding: 10px 20px;
+    width: fit-content;
+    border-radius: 20px;
+    color: white;
+    text-decoration: none;
+    a{
+      color: white;
+      text-decoration: none;
+    }
+  }
+}
+
+.green-highlight{
+  .field-promolink{
+    background-color: #648147;
+  }
 }

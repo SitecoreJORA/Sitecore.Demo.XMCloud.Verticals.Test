@@ -73,5 +73,9 @@
   top: -190px;
   .text-wrapper{
     background:white;
+    &:hover{
+      background-color: #8b124c;
+      color: white;
+    }
   }
 }

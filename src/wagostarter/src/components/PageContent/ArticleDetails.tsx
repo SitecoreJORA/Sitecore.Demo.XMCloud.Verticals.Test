@@ -63,25 +63,26 @@ export const Default = (props: PageBackgroundProps): JSX.Element => {
                     width={600}
                     height={400}
                   />
-                  <div className="col-12 col-lg-6">
+                  <div className="col-12 col-lg-6 p-range-content">
                     <p className="article-excerpt">
                       <Text field={props.fields.Excerpt} />
-                      <RichText field={props.fields.Content} />
                     </p>
+                    <RichText field={props.fields.Content} />
                   </div>
                   <div className="col-12 col-lg-6">
-                    <div className="row">
-                      <RichText field={props.fields.Benefits} />
+                    <div className="benefits-box">
+                      <div className="benefits-title">
+                        <h3>Your Benefits:</h3>
+                      </div>
+                      <div className="benefits-content">
+                        <RichText field={props.fields.Benefits} />
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
-              <div className="row">
-                <Placeholder name="background-page-content" rendering={props.rendering} />
-              </div>
             </div>
           </div>
-          <Placeholder name="page-content" rendering={props.rendering} />
         </div>
       </div>
     </>

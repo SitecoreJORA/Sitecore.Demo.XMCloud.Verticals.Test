@@ -9,13 +9,14 @@ import {
   NextImage,
 } from '@sitecore-jss/sitecore-jss-nextjs';
 import { ComponentProps } from 'lib/component-props';
-import { ParallaxBackgroundImage } from 'components/NonSitecore/ParallaxBackgroundImage';
 import Head from 'next/head';
 
 interface Fields {
   Title: Field<string>;
+  MarketingName: Field<string>;
   Excerpt: Field<string>;
   Content: RichTextField;
+  Benefits: RichTextField;
   Thumbnail: ImageField;
   BackgroundImage: ImageField;
   Name: Field<string>;
@@ -42,10 +43,13 @@ export const Default = (props: PageBackgroundProps): JSX.Element => {
         className={`component article-details page-background spaced-top col-12 ${props.params?.styles?.trimEnd()}`}
         id={id ? id : undefined}
       >
-        <ParallaxBackgroundImage BackgroundImage={props.fields.BackgroundImage} />
-
         <div className="container">
-          <Placeholder name="page-navigation" rendering={props.rendering} />
+          <h1 className="article-title">
+            <Text field={props.fields.Title} />
+          </h1>
+          <h2 className="article-marketing-name">
+            <Text field={props.fields.MarketingName} />
+          </h2>
         </div>
 
         <div>
@@ -53,28 +57,23 @@ export const Default = (props: PageBackgroundProps): JSX.Element => {
             <div className="p-3 p-sm-5">
               <div className="article-content">
                 <div className="row row-gap-4 gx-5">
+                  <NextImage
+                    field={props.fields.Thumbnail}
+                    className="article-img img-fluid"
+                    width={600}
+                    height={400}
+                  />
                   <div className="col-12 col-lg-6">
-                    <NextImage
-                      field={props.fields.Thumbnail}
-                      className="article-img img-fluid"
-                      width={600}
-                      height={400}
-                    />
+                    <p className="article-excerpt">
+                      <Text field={props.fields.Excerpt} />
+                      <RichText field={props.fields.Content} />
+                    </p>
                   </div>
                   <div className="col-12 col-lg-6">
                     <div className="row">
-                      <Placeholder name="article-meta" rendering={props.rendering} />
+                      <RichText field={props.fields.Benefits} />
                     </div>
-                    <h1 className="article-title">
-                      <Text field={props.fields.Title} />
-                    </h1>
-                    <p className="article-excerpt">
-                      <Text field={props.fields.Excerpt} />
-                    </p>
                   </div>
-                </div>
-                <div className="article-content-body mt-5">
-                  <RichText field={props.fields.Content} />
                 </div>
               </div>
               <div className="row">

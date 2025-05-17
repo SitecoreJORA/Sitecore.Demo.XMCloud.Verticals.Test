@@ -11,6 +11,7 @@ import {
 interface Fields {
   PromoIcon: ImageField;
   PromoText: Field<string>;
+  PromoTitle: Field<string>;
   PromoLink: LinkField;
   PromoText2: Field<string>;
 }
@@ -34,12 +35,71 @@ export const Default = (props: PromoProps): JSX.Element => {
     return (
       <div className={`component promo ${props.params.styles}`} id={id ? id : undefined}>
         <div className="component-content">
+          <div className="promo-text">
+            <div>
+              <div className="field-promotext">
+                <h2>
+                  <JssRichText field={props.fields.PromoTitle} />
+                </h2>
+                <JssRichText field={props.fields.PromoText} />
+              </div>
+            </div>
+            <div className="field-promolink">
+              <JssLink field={props.fields.PromoLink} />
+            </div>
+          </div>
+          <div className="field-promoicon">
+            <JssImage field={props.fields.PromoIcon} />
+          </div>
+        </div>
+      </div>
+    );
+  }
+
+  return <PromoDefaultComponent {...props} />;
+};
+
+export const ImageLeft = (props: PromoProps): JSX.Element => {
+  const id = props.params.RenderingIdentifier;
+  if (props.fields) {
+    return (
+      <div className={`component promo ${props.params.styles}`} id={id ? id : undefined}>
+        <div className="component-content">
           <div className="field-promoicon">
             <JssImage field={props.fields.PromoIcon} />
           </div>
           <div className="promo-text">
             <div>
               <div className="field-promotext">
+                <h2>
+                  <JssRichText field={props.fields.PromoTitle} />
+                </h2>
+                <JssRichText field={props.fields.PromoText} />
+              </div>
+            </div>
+            <div className="field-promolink">
+              <JssLink field={props.fields.PromoLink} />
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+  }
+  return <PromoDefaultComponent {...props} />;
+};
+
+export const NoImage = (props: PromoProps): JSX.Element => {
+  const id = props.params.RenderingIdentifier;
+  if (props.fields) {
+    return (
+      <div className={`component promo no-image ${props.params.styles}`} id={id ? id : undefined}>
+        <div className="component-content">
+          <div className="promo-text">
+            <div>
+              <div className="field-promotext">
+                <h2>
+                  <JssRichText field={props.fields.PromoTitle} />
+                </h2>
                 <JssRichText field={props.fields.PromoText} />
               </div>
             </div>

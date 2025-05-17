@@ -65,7 +65,7 @@ export const Default = (props: PageBackgroundProps): JSX.Element => {
                   />
                   <div className="col-12 col-lg-6 p-range-content">
                     <p className="article-excerpt">
-                      <Text field={props.fields.Excerpt} />
+                      <RichText field={props.fields.Excerpt} />
                     </p>
                     <RichText field={props.fields.Content} />
                   </div>

@@ -2,16 +2,27 @@
 @import 'src/assets/sass/abstracts/mixins';
 
 .promo {
-  background: $promo-bg;
+  margin-top: 15px;
+  background: white;
   padding: 15px;
   overflow: hidden;
   box-sizing: border-box;
 
+  .promo-text{
+    width: 50%;
+  }
+
+  &.no-image{
+    .promo-text{
+      width: 100%;
+    }
+  }
+
   > .component-content {
+    display: flex;
     position: relative;
 
     @include clearfix;
-    @include border-basic(all, $promo-border);
 
     > div {
       padding: 5px;
@@ -26,7 +37,7 @@
 
   .field-promoicon {
     overflow: hidden;
-    width: 100%;
+    width: 50%;
 
     img {
       width: 100%;
@@ -37,6 +48,15 @@
   .field-promolink {
     margin-top: 5px;
     padding-bottom: 10px;
+    border: black 1px solid;
+    width: fit-content;
+    padding: 15px;
+    margin-top: 15px;
+    float: right;
+    a{
+      text-decoration: none;
+      font-weight: 600;
+    }
   }
 
   &.image-full-size {

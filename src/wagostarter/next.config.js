@@ -48,6 +48,11 @@ const nextConfig = {
       },
       {
         protocol: 'https',
+        hostname: 'wago.sitecoresandbox.cloud',
+        port: '',
+      },
+      {
+        protocol: 'https',
         hostname: 'xmc-*.**',
         port: '',
       },

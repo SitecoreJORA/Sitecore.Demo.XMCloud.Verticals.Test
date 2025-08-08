@@ -9,7 +9,6 @@ import {
   NextImage,
 } from '@sitecore-jss/sitecore-jss-nextjs';
 import { ComponentProps } from 'lib/component-props';
-import { ParallaxBackgroundImage } from 'components/NonSitecore/ParallaxBackgroundImage';
 import Head from 'next/head';
 
 interface Fields {

@@ -6,7 +6,6 @@ import {
   Text,
   Link,
   useSitecoreContext,
-  Placeholder,
   NextImage,
 } from '@sitecore-jss/sitecore-jss-nextjs';
 import { ComponentProps } from 'lib/component-props';
@@ -38,7 +37,6 @@ export const Default = (props: TwoColumnCtaProps): JSX.Element => {
     title,
     text,
     link,
-    placeholder,
     delay,
   }: {
     image: ImageField;
@@ -75,7 +73,6 @@ export const Default = (props: TwoColumnCtaProps): JSX.Element => {
           {(isPageEditing || link?.value?.href) && (
             <Link field={link} className={`button ${buttonStyle}`} />
           )}
-          <Placeholder name={placeholder} rendering={props.rendering} />
         </div>
       </div>
     );

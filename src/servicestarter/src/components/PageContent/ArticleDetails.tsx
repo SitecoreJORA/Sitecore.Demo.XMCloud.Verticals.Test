@@ -39,32 +39,15 @@ export const Default = (props: PageBackgroundProps): JSX.Element => {
         <meta property="og:type" content="article" />
       </Head>
       <div
-        className={`component article-details page-background spaced-top col-12 ${props.params?.styles?.trimEnd()}`}
+        className={`article-details page-background spaced-top col-12 ${props.params?.styles?.trimEnd()}`}
         id={id ? id : undefined}
       >
-        <ParallaxBackgroundImage BackgroundImage={props.fields.BackgroundImage} />
-
-        <div className="container">
-          <Placeholder name="page-navigation" rendering={props.rendering} />
-        </div>
-
         <div>
-          <div className="background-content component-spaced container rounded-corners">
+          <div className="background-content component-spaced">
             <div className="p-3 p-sm-5">
               <div className="article-content">
                 <div className="row row-gap-4 gx-5">
-                  <div className="col-12 col-lg-6">
-                    <NextImage
-                      field={props.fields.Thumbnail}
-                      className="article-img img-fluid"
-                      width={600}
-                      height={400}
-                    />
-                  </div>
-                  <div className="col-12 col-lg-6">
-                    <div className="row">
-                      <Placeholder name="article-meta" rendering={props.rendering} />
-                    </div>
+                  <div className="container">
                     <h1 className="article-title">
                       <Text field={props.fields.Title} />
                     </h1>
@@ -73,18 +56,21 @@ export const Default = (props: PageBackgroundProps): JSX.Element => {
                     </p>
                   </div>
                 </div>
-                <div className="article-content-body mt-5">
-                  <RichText field={props.fields.Content} />
-                </div>
               </div>
               <div className="row">
                 <Placeholder name="background-page-content" rendering={props.rendering} />
               </div>
             </div>
           </div>
-          <Placeholder name="page-content" rendering={props.rendering} />
+          <div className="container">
+            <Placeholder name="page-navigation" rendering={props.rendering} />
+          </div>
+          <div className="article-content-body container mt-5">
+            <RichText field={props.fields.Content} />
+          </div>
         </div>
       </div>
+      <Placeholder name="page-content" rendering={props.rendering} />
     </>
   );
 };

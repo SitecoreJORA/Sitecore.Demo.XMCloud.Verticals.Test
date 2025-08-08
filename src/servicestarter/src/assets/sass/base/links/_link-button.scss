@@ -32,13 +32,16 @@
   border-radius: var(--button-roundness);
   padding: var(--button-padding);
   transition: all 0.2s ease-in-out;
+  width: fit-content;
 }
 
 .button-main {
-  background-color: var(--button-main-bg-color);
-  color: var(--button-main-color);
-  text-transform: var(--button-text-transform);
-  border: none;
+  background-color: white;
+  color: black;
+  text-transform: none;
+  border: 2px black solid;
+  border-radius: 15px;
+  font-weight: 700;
 
   a {
     color: var(--button-main-color);
@@ -46,8 +49,8 @@
   }
 
   &:hover {
-    color: var(--button-main-color);
-    filter: brightness(125%);
+    color: white;
+    background-color: black;
   }
 }
 

@@ -1,3 +1,10 @@
+.small-icons{
+  img{
+    max-width: 48px;
+    max-height: 48px;
+    border-radius: 0!important;
+  }
+}
 .two-column-cta {
   @include respond-to(mobile-large) {
     padding: 0 $size-padding;
@@ -20,8 +27,8 @@
   .content-wrapper {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    text-align: center;
+    align-items: left;
+    text-align: left;
     padding-bottom: 1em;
     height: 100%;
     background-color: var(--bg-body);
@@ -35,7 +42,7 @@
 
   h2,
   p {
-    padding-left: 1rem;
+    //padding-left: 1rem;
     padding-right: 1rem;
   }
 

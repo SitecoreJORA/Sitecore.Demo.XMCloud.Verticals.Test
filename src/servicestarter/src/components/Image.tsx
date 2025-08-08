@@ -22,7 +22,7 @@ type ImageProps = {
 };
 
 const ImageDefault = (props: ImageProps): JSX.Element => (
-  <div className={`component image ${props.params.styles}`.trimEnd()}>
+  <div className={`image ${props.params.styles}`.trimEnd()}>
     <div className="component-content">
       <span className="is-empty-hint">Image</span>
     </div>
@@ -76,7 +76,7 @@ export const Default = (props: ImageProps): JSX.Element => {
     const id = props.params.RenderingIdentifier;
 
     return (
-      <div className={`component image ${props.params.styles}`} id={id ? id : undefined}>
+      <div className={`image ${props.params.styles}`} id={id ? id : undefined}>
         <div className="component-content">
           {sitecoreContext.pageState === 'edit' || !props.fields.TargetUrl?.value?.href ? (
             <Image />

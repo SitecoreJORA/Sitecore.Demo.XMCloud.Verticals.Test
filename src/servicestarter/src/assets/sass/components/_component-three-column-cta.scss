@@ -5,7 +5,13 @@
 .site-services {
   --promo-cta-text-opacity: 0.65;
 }
-
+.small-icons{
+  img{
+    max-width: 48px;
+    max-height: 48px;
+    border-radius: 0!important;
+  }
+}
 .three-column-cta {
   @include respond-to(mobile-large) {
     padding: 0 $size-padding;

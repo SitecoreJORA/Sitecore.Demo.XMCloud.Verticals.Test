@@ -4,7 +4,9 @@ html {
   margin-bottom: 0;
   height: auto !important;
 }
-
+.ck.ck-editor__editable_inline{
+  padding: 0!important;
+}
 body {
   @include opensans-font-stack;
 

@@ -134,7 +134,10 @@ $borderSize: 2px;
     .submenu > ul {
       padding-left: 0;
     }
-
+    li{
+      padding-right: 2rem;
+      font-weight: 700;
+    }
     .rel-level1 {
       &:active,
       &:hover {

@@ -2,8 +2,10 @@
   --promo-cta-text-opacity: 1;
 }
 .hide-last-element{
-  .row:last-child{
-    display: none;
+  .row{
+    div:last-child{
+      display: none;
+    }
   }
 }
 .site-services {

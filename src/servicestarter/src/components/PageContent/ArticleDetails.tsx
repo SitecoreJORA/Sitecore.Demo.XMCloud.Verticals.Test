@@ -56,9 +56,6 @@ export const Default = (props: PageBackgroundProps): JSX.Element => {
                   </div>
                 </div>
               </div>
-              <div className="row">
-                <Placeholder name="background-page-content" rendering={props.rendering} />
-              </div>
             </div>
           </div>
           <div className="container">
@@ -69,7 +66,6 @@ export const Default = (props: PageBackgroundProps): JSX.Element => {
           </div>
         </div>
       </div>
-      <Placeholder name="page-content" rendering={props.rendering} />
     </>
   );
 };

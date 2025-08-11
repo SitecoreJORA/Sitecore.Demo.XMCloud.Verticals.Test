@@ -11,7 +11,7 @@
 }
 
 .promo-cta {
-  background-color: var(--bg-main-alt);
+  background-color: transparent;
   padding-top: $component-margin * 2;
   padding-bottom: $component-margin * 2;
 
@@ -19,7 +19,9 @@
     padding-left: $size-padding;
     padding-right: $size-padding;
   }
-
+  .reduced-margin-top{
+    margin-top: 0px;
+  }
   &.with-dotted-accents {
     .image-wrapper {
       margin: 3.5rem;
@@ -88,7 +90,7 @@
       aspect-ratio: var(--promo-cta-img-ratio);
       width: 100%;
       object-fit: cover;
-      border-radius: var(--roundness);
+      //border-radius: var(--roundness);
       overflow: hidden;
     }
   }

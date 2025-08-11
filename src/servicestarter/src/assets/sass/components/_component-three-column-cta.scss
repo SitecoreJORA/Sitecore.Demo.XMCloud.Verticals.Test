@@ -1,7 +1,11 @@
 .site-financial {
   --promo-cta-text-opacity: 1;
 }
-
+.hide-last-element{
+  .row:last-child{
+    display: none;
+  }
+}
 .site-services {
   --promo-cta-text-opacity: 0.65;
 }

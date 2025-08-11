@@ -44,21 +44,16 @@ export const Default = (props: PromoCtaProps): JSX.Element => {
       ref={domRef}
     >
       <div className="container">
-        <div className="row row-gap-4 main-content align-items-center">
-          <div className="col-lg-5 text-center text-lg-start">
-            <h6 className="eyebrow-accent">
-              <Text field={props.fields.Eyebrow} />
-            </h6>
-            <h1 className="display-6 fw-bold mb-3">
-              <Text field={props.fields.Title} />
-            </h1>
+        <div className="row row-gap-4 main-content">
+          <h2 className="display-6 fw-bold mb-3">
+            <Text field={props.fields.Title} />
+          </h2>
+          <div className="col-md-10 mx-auto col-lg-7 mx-lg-0 reduced-margin-top">
             <div className="promo-cta-text">
-              <p className="fs-5">
-                <Text field={props.fields.Subtitle} />
-              </p>
-
               <RichText field={props.fields.Text} className="text-content" />
-
+              <h6 className="eyebrow-accent">
+                <Text field={props.fields.Eyebrow} />
+              </h6>
               <div className="row mt-2">
                 <Placeholder name="promo-cta" rendering={props.rendering} />
               </div>
@@ -71,7 +66,7 @@ export const Default = (props: PromoCtaProps): JSX.Element => {
               )}
             </div>
           </div>
-          <div className="col-md-10 mx-auto col-lg-7 mx-lg-0">
+          <div className="col-lg-5 text-center text-lg-start reduced-margin-top">
             <div className="image-wrapper">
               <DottedAccent className="dotted-accent-top" />
               <NextImage

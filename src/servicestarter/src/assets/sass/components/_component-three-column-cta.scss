@@ -2,10 +2,8 @@
   --promo-cta-text-opacity: 1;
 }
 .hide-last-element{
-  .row{
-    div:last-child{
-      display: none;
-    }
+  div.row div:last-child{
+    display: none;
   }
 }
 .site-services {

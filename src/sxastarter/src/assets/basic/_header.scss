@@ -5,7 +5,12 @@
 .prod-mode {
   #header {
     display: flex;
-
+    #header-width{
+      max-width: 1560px;
+      margin: auto;
+      padding-top: 15px;
+      padding-bottom: 15px;
+    }
     @include respond-to(mobile-large) {
       padding-bottom: 0;
     }
@@ -14,6 +19,12 @@
 
 header {
   #header {
+    #header-width{
+      max-width: 1560px;
+      margin: auto;
+      padding-top: 15px;
+      padding-bottom: 15px;
+    }
     .bs-title {
       a {
         text-decoration: none;

@@ -1,6 +1,11 @@
 @import 'src/assets/sass/abstracts/vars';
 
 .image {
+  &.header-logo{
+    img{
+      max-width:220px;
+    }
+  }
   img {
     max-width: 100%;
     height: auto;

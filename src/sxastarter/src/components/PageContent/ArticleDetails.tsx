@@ -104,23 +104,30 @@ export const Simple = (props: PageBackgroundProps): JSX.Element => {
         className={`component simple-article-details mt-4 ${props.params?.styles?.trimEnd()}`}
         id={id ? id : undefined}
       >
-        <div className="container container-wide">
-          <h1 className="article-title display-1 fw-bold">
-            <Text field={props.fields.Title} />
-          </h1>
-        </div>
-        <div className="container container-widest-fluid">
-          <NextImage
-            field={props.fields.Thumbnail}
-            className="article-img img-fluid"
-            width={1650}
-            height={750}
-          />
+        <div className="component-spaced container">
+          <div className="row row-gap-4 gx-5">
+            <div className="col-12 col-lg-6">
+              <NextImage
+                field={props.fields.Thumbnail}
+                className="article-img img-fluid"
+                width={600}
+                height={400}
+              />
+            </div>
+            <div className="col-12 col-lg-6">
+              <h1 className="article-title">
+                <Text field={props.fields.Title} />
+              </h1>
+              <p className="article-excerpt">
+                <Text field={props.fields.Excerpt} />
+              </p>
+            </div>
+          </div>
         </div>
         <div className="container">
           <div className="article-content">
             <div className="row">
-              <div className="col-12 col-lg-6 mx-auto">
+              <div className="col-12 mx-auto">
                 <p className="article-excerpt fs-5">
                   <Text field={props.fields.Excerpt} />
                 </p>

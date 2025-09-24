@@ -17,6 +17,8 @@ $borderSize: 2px;
 
   .rel-level1 {
     float: left;
+    font-weight: 700;
+    padding-right: 30px;
 
     &.active {
       > .navigation-title > a:link,
@@ -32,12 +34,14 @@ $borderSize: 2px;
 
       > .navigation-title > a {
         border-color: $nav-border-root;
+        
       }
     }
 
     > .navigation-title > a {
       border-width: 2px 0 0;
       border-color: transparent;
+      font-size: 22px;
 
       &:hover {
         border-color: $nav-border-root;
@@ -106,7 +110,7 @@ $borderSize: 2px;
     div > a {
       display: block;
       font-weight: normal;
-      font-size: $navigation-font-basic-submenu;
+      font-size: 20px;
       text-align: center;
 
       &:hover,

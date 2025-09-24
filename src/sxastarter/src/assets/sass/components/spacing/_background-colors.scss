@@ -1,7 +1,18 @@
 @import 'src/assets/sass/abstracts/vars';
 
+.additional-space{
+    padding: 40px;
+ }
+.space-right{
+  padding-right: 5px;
+}
+.space-left{
+  margin-left: 15px;
+}
+
 .container-gray-background {
   background: $bg-light-gray;
+  
 }
 
 .container-clean-background {

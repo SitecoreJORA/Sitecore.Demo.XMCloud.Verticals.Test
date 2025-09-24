@@ -134,29 +134,24 @@ const ArticleListSimplified = (props: ArticleListComponentProps): JSX.Element =>
       <div className="container">
         <div className="row align-items-center">
           <div className="col">
-            <div className="title display-6">{t('News') || 'News'}</div>
+            <h2 className="title display-6">
+              {t('Latest press releases') || 'Latest press releases'}
+            </h2>
           </div>
           <div className="col-auto learn-more">
             <Link href={allArticlesPageHref} className="button button-simple">
-              {t('See all') || 'See all'} <i className="fa fa-angle-right fs-4" />
+              {t('See all') || 'See all'}
             </Link>
           </div>
         </div>
 
-        <div className="background p-3 p-sm-5">
+        <div className="background">
           {newsItems?.map((item, i) => (
             <React.Fragment key={item.url}>
               <div className="row gx-5 row-gap-3 align-items-center">
-                <div className="col-lg-4">
-                  <NextImage field={item.fields.Thumbnail} width={400} height={300} />
-                </div>
-
-                <div className="col-lg-6">
-                  <h3 className="fs-4">
-                    <Text field={item.fields.Title}></Text>
-                  </h3>
+                <div className="col-lg-12">
                   <p>
-                    <Text field={item.fields.Excerpt}></Text>
+                    <Text field={item.fields.Title}></Text>
                   </p>
                   <Link href={item.url} className="button button-simple">
                     {t('Read more') || 'Read more'}

@@ -11,15 +11,17 @@
 }
 
 .promo-cta {
-  background-color: var(--bg-main-alt);
-  padding-top: $component-margin * 2;
-  padding-bottom: $component-margin * 2;
+  background-color: #fdf6ee;
+  //padding-top: $component-margin * 2;
+  //padding-bottom: $component-margin * 2;
 
   @include respond-to(mobile-large) {
     padding-left: $size-padding;
     padding-right: $size-padding;
   }
-
+  .promo-text{
+    padding-left: 30px;
+  }
   &.with-dotted-accents {
     .image-wrapper {
       margin: 3.5rem;
@@ -69,8 +71,8 @@
   }
 
   .main-content {
-    --bs-gutter-x: 8rem;
-    --bs-gutter-y: 3rem;
+    //--bs-gutter-x: 8rem;
+    //--bs-gutter-y: 3rem;
   }
 
   .text-content {
@@ -88,7 +90,7 @@
       aspect-ratio: var(--promo-cta-img-ratio);
       width: 100%;
       object-fit: cover;
-      border-radius: var(--roundness);
+      //border-radius: var(--roundness);
       overflow: hidden;
     }
   }

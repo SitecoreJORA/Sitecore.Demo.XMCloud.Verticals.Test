@@ -1,6 +1,11 @@
 @import 'src/assets/sass/abstracts/vars';
 
 .image {
+  &.hide-image-caption{
+    span{
+      display: none;
+    }
+  }
   &.header-logo{
     img{
       max-width:220px;
